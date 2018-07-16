@@ -1,5 +1,6 @@
 $:.unshift '.'
 require 'config/environment'
+require 'Rack::MethodOverride'
 
 use Rack::Static, :urls => ['/css'], :root => 'public' # Rack fix allows seeing the css folder.
 
