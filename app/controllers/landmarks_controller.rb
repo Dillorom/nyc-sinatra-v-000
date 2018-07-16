@@ -8,4 +8,9 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/show'
   end
 
+  post '/landmarks' do
+    @landmark = Landmark.create(params[:landmark][:name])
+    redirect '/landmarks/show'
+  end
+
 end
